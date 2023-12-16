@@ -1,0 +1,123 @@
+.side{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 10px;
+    padding: 20px;
+    right: 0;
+    height: 100%;
+    transition: right 0.2s ease; /* Плавное перемещение */
+}
+.side_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+.side_edit{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border: none;
+    border-radius: 40px;
+    background: rgba(217, 217, 217, 0.30);
+    backdrop-filter: blur(37.5px);
+}
+.app_section{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+    border-radius: 23px;
+    background: rgba(217, 217, 217, 0.30);
+    backdrop-filter: blur(37.5px);
+}
+.app_section p{
+    max-width: 30px;
+    margin: 5px 0;
+    font-size: 14px;
+    overflow-wrap: anywhere;
+    color: #fff;
+}
+.side_app{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 15px;
+    background-color: #fff;
+}
+.side_app_settings{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 15px;
+    background-color: #939393;
+}
+.show_side{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    margin: 10px;
+    width: 44px;
+    height: 44px;
+    border: none;
+    border-radius: 15px;
+    background: rgba(217, 217, 217, 0.30);
+    backdrop-filter: blur(37.5px);
+}
+.show_side_img{
+    transition: transform 0.3s ease; /* Анимация поворота */
+}
+.side_edit_configuration{
+    display: none;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 23px;
+    background: rgba(217, 217, 217, 0.30);
+    backdrop-filter: blur(37.5px);
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+}
+.side_edit_container{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+    gap: 10px;
+    width: 175px;
+    height: 30px;
+}
+.side_edit_container p{
+    margin: 0;
+    font-size: 14px;
+    font-weight: 400;
+}
+.side_edit_container input{
+    position: absolute;
+    right: 10px;
+}
+.side_edit_container_img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: #fff;
+}

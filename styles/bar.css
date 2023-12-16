@@ -1,0 +1,515 @@
+.bar{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    bottom: 30px;
+    width: 100%;
+    height: 100px;
+}
+.add{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    border: none;
+    cursor: pointer;
+    border-radius: 40px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+}
+.add_item{
+    width: 9px;
+    height: 9px;
+    border-radius: 9px;
+    background: rgba(255, 255, 255, 0.8);
+    transition: transform 0.3s ease;
+}
+.add:hover .add_item {
+    transform: scale(2.3);
+  }
+.add_container{
+    position: absolute;
+    display: none;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: row;
+    gap: 10px;
+    width: auto;
+    height: auto;
+    bottom: 110px;
+}
+.add_flow{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    bottom: 100px;
+    width: initial;
+    padding: 9px;
+    height: 270px;
+    border-radius: 23px;
+    background: rgba(217, 217, 217, 0.30);
+    backdrop-filter: blur(37.5px);
+}
+.flow_top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 14px;
+    gap: 20px;
+    width: 100%;
+    height: 39px;
+}
+.flow_top p{
+    margin-left: 16px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+}
+.flow_center{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    overflow: auto;
+    gap: 8px;
+}
+.flow_1,
+.flow_2,
+.flow_3,
+.flow_4,
+.flow_5,
+.flow_6,
+.flow_7,
+.flow_8{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 317px;
+    min-height: 47px;
+    padding: 0 8px 0 16px;
+    border-radius: 40px;
+    background: rgba(0, 0, 0, 0.40);
+}
+.flow_1 p,
+.flow_2 p,
+.flow_3 p,
+.flow_4 p,
+.flow_5 p,
+.flow_6 p,
+.flow_7 p,
+.flow_8 p{
+    max-width: 147px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0;
+    font-size: 14px;
+    color: #fff;
+}
+.flow_configuration{
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 9px;
+    width: auto;
+    height: auto;
+    border-radius: 23px;
+    background: rgba(217, 217, 217, 0.30);
+    backdrop-filter: blur(37.5px);
+    transition: 0.3s ease;
+}
+.flow_configuration p{
+    margin-left: 10px;
+}
+.flow_configuration_top{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 38px;
+    font-size: 16px;
+}
+.flow_configuration_top p{
+    margin: 16px 0 7px 11px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+}
+.flow_configuration_center input{
+    width: 150px;
+    height: 35px;
+    border: none;
+    border-radius: 23px;
+    padding: 0 0 0 11px;
+    outline: none;
+    background: rgba(0, 0, 0, 0.40);
+    color: #fff;
+}
+.flow_configuration_center p{
+    margin: 16px 0 7px 11px;
+    font-size: 14px;
+    color: #fff;
+}
+.line_section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0 10px 0;
+    width: 100%;
+}
+.line{
+    display: flex;
+    width: 63px;
+    height: 4px;
+    border-radius: 4px;
+    opacity: 0.8;
+    background: rgba(255, 255, 255, 0.10);
+}
+.add_and_delete_section{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.add_and_delete_section_flow{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 35px;
+}
+.add_and_delete_section_flow p{
+    margin: 0;
+}
+.add_and_delete_section_app{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+}
+.add_flow_active{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 118px;
+    height: 35px;
+    border: none;
+    cursor: pointer;
+    border-radius: 23px;
+    background: rgba(255, 255, 255, 0.20);
+}
+.delete_flow_active{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    border: none;
+    cursor: pointer;
+    border-radius: 23px;
+    background: rgba(255, 255, 255, 0.20);
+}
+.flow_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 10px;
+}
+.flow_app_1,
+.flow_app_2,
+.flow_app_3,
+.flow_app_4,
+.flow_app_5,
+.flow_app_6,
+.flow_app_7,
+.flow_app_8{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    min-width: 64px;
+    height: 81px;
+    border-radius: 23px;
+    background: rgba(217, 217, 217, 0.30);
+    backdrop-filter: blur(37.5px);
+    color: #fff;
+}
+.app_container_1,
+.app_container_2,
+.app_container_3,
+.app_container_4,
+.app_container_5,
+.app_container_6,
+.app_container_7,
+.app_container_8{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 8px 10px 0 10px;
+    gap: 10px;
+    width: auto;
+    height: 46px;
+}
+.app_name{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    bottom: 0;
+    max-width: 65%;
+    height: 27px;
+}
+.app_name p{
+    max-width: 100%;
+    font-size: 12px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.edit_buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+.app_configuration_1, 
+.app_configuration_2, 
+.app_configuration_3, 
+.app_configuration_4, 
+.app_configuration_5, 
+.app_configuration_6, 
+.app_configuration_6, 
+.app_configuration_7, 
+.app_configuration_8{
+    display: none;
+    flex-direction: column;
+    padding: 9px;
+    width: auto;
+    height: 270px;
+    border-radius: 23px;
+    background: rgba(217, 217, 217, 0.30);
+    backdrop-filter: blur(37.5px);
+}
+.app_configuration_top{
+    height: 38px;
+}
+.app_configuration_top p{
+    margin: 11px 0 7px 11px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+}
+.app_configuration_center p{ 
+    margin: 11px 0 7px 11px;
+    font-size: 14px;
+    color: #fff;
+}
+.app_input_name_1,
+.app_input_name_2,
+.app_input_name_3,
+.app_input_name_4,
+.app_input_name_5,
+.app_input_name_6,
+.app_input_name_7,
+.app_input_name_8{
+    width: 150px;
+    height: 35px;
+    border: none;
+    border-radius: 23px;
+    padding: 0 0 0 11px;
+    outline: none;
+    background: rgba(0, 0, 0, 0.40);
+    color: #fff;
+}
+.app_input_url_1,
+.app_input_url_2,
+.app_input_url_3,
+.app_input_url_4,
+.app_input_url_5,
+.app_input_url_6,
+.app_input_url_7,
+.app_input_url_8{
+    width: 150px;
+    height: 60px;
+    border: none;
+    border-radius: 23px;
+    padding: 0 0 0 11px;
+    outline: none;
+    background: rgba(0, 0, 0, 0.40);
+    color: #fff;
+}
+.add_app_active{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 118px;
+    height: 35px;
+    border: none;
+    border-radius: 23px;
+    background: rgba(255, 255, 255, 0.20);
+}
+[class^="add_app_active_"]{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 118px;
+    height: 35px;
+    border: none;
+    cursor: pointer;
+    border-radius: 23px;
+    background: none;
+    z-index: 100;
+}
+.add_app_active p{
+    margin: 0;
+}
+.delete_app_active{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    border: none;
+    border-radius: 23px;
+    background: rgba(255, 255, 255, 0.20);
+}
+[class^="delete_app_active_"]{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    border: none;
+    cursor: pointer;
+    border-radius: 23px;
+    background: none;
+    z-index: 100;
+}
+.delete_app_active img{
+    position: absolute;
+}
+.app{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 15px;
+    background-color: #fff;
+}
+.app a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+.app img{
+    width: 23px;
+    height: 23px;
+    border-radius: 7px;
+}
+.delete_button_app_1,
+.delete_button_app_2,
+.delete_button_app_3,
+.delete_button_app_4,
+.delete_button_app_5,
+.delete_button_app_6,
+.delete_button_app_7,
+.delete_button_app_8{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.delete_button_app_1 img,
+.delete_button_app_2 img,
+.delete_button_app_3 img,
+.delete_button_app_4 img,
+.delete_button_app_5 img,
+.delete_button_app_6 img,
+.delete_button_app_7 img,
+.delete_button_app_8 img{
+    width: 10px;
+    height: 10px;
+}
+.app button{
+    position: absolute;
+    display: flex;
+    width: 20px;
+    height: 20px;
+    top: 5px;
+    margin-left: 40px;
+    border: none;
+    border-radius: 40px;
+    background-color: #fff;
+}
+.app_value{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    top: -20px;
+    max-width: 170px;
+    font-size: 12px;
+    color: #ffffff;
+}
+[class^="add_btn_app_"]{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 87px;
+    height: 35px;
+    border: none;
+    cursor: pointer;
+    border-radius: 23px;
+    background: rgba(255, 255, 255, 0.20);
+}
+.delete_btn_app{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 23px;
+    height: 23px;
+    border: none;
+    cursor: pointer;
+    border-radius: 40px;
+    background: rgba(255, 255, 255, 0.2);
+}
+.edit_btn_app{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 23px;
+    height: 23px;
+    border: none;
+    cursor: pointer;
+    border-radius: 40px;
+    background: rgba(255, 255, 255, 0.2);
+}
+.create_flow{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 173px;
+    height: 41px;
+    border: none;
+    cursor: pointer;
+    border-radius: 23px;
+    background: rgba(255, 255, 255, 0.2);
+    transition: 0.3s ease;
+    color: #fff;
+}
+.line_horizontal{
+    width: 3px;
+    height: 18px;
+    border-radius: 26px;
+    opacity: 0.7;
+    background: #D9D9D9;
+}

@@ -1,0 +1,215 @@
+.search{
+    position: absolute;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: 70px;
+    gap: 10px;
+    width: 100%;
+    height: 180px;
+}
+.search_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+    width: auto;
+    height: auto;
+    border-radius: 23px;
+    background: rgba(217, 217, 217, 0.30);
+    backdrop-filter: blur(37.5px);
+}
+.search_navigation{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 690px;
+    height: 56px;
+    border-radius: 15px;
+    background: rgba(217, 217, 217, 0.30);
+}
+.search_input{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+}
+.search_img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 100%;
+}
+.search_img img{
+    margin-left: 7px;
+}
+.search_input input{
+    outline: none;
+    padding: 0 20px 0 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    font-size: 14px;
+    background-color: transparent;
+    color: #fff;
+}
+.search_input input::placeholder{
+    position: absolute;
+    margin-top: 2px;
+    color: #ddd;
+}
+.search_value{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    padding: 0 10px 0 10px;
+    gap: 8px;
+    width: auto;
+    height: 100%;
+}
+.add_search_app{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+    border: none;
+    border-radius: 23px;
+    background: rgba(217, 217, 217, 0.30);
+}
+.search_app_1,
+.search_app_2,
+.search_app_3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 40px;
+    background-color: #fff;
+}
+.search_app_configuration{
+    display: none;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 160px;
+    height: 195px;
+    border-radius: 23px;
+    background: rgba(255, 255, 255, 0.3);  
+    backdrop-filter: blur(37.5px);
+}
+.search_app_configuration_title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    height: 70px;
+}
+.search_app_configuration_title p{
+    font-weight: 700;
+    font-size: 16px;
+    color: #fff;
+}
+[class^="search_app_configuration_center"]{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+}
+.search_app_configuration_container{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+    gap: 10px;
+    width: 80%;
+    height: 40px;
+}
+.custom-checkbox{
+    position: absolute;
+    display: flex;
+    right: 15px;
+    border-radius: 40px;
+}
+.search_app_configuration_container p{
+    font-size: 14px;
+    color: #fff;
+}
+.search_app_configuration_container_img{
+    display: flex;
+    align-items: center;
+    width: 17px;
+    height: 17px;
+}
+.search_history{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 640px;
+    height: auto;
+    font-size: 12px;
+    color: #fff;
+}
+.search_history p{
+    text-overflow: ellipsis;
+    margin: 7px 0 0px;
+    cursor: pointer;
+}
+.vertical_search_line{
+    min-width: 3px;
+    margin: 7px 17px 0px;
+    height: 14px;
+    border-radius: 40px;
+    opacity: 0.7;
+    background: #D9D9D9;
+}
+
+
+
+/* ------------------ */
+/* Скрываем оригинальный чекбокс */
+.custom-checkbox input[type="checkbox"] {
+    visibility: hidden;
+    position: absolute;
+  }
+  
+  /* Создаем круглый чекбокс */
+  .custom-checkbox .checkmark {
+    height: 15px;
+    width: 15px;
+    background-color: none;
+    border: 2px solid #fff;
+    border-radius: 50%; /* Делаем его круглым */
+    display: inline-block;
+    position: relative;
+  }
+  
+  /* Стиль для чекбокса при его активации */
+  .custom-checkbox input[type="checkbox"]:checked + .checkmark {
+    background-color: #ffffff;
+  }
+  
+  /* Добавляем галочку внутрь круглого чекбокса */
+  .custom-checkbox .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  .custom-checkbox input[type="checkbox"]:checked + .checkmark:after {
+    display: block;
+  }
+  
