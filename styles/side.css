@@ -10,11 +10,18 @@
     height: 100%;
     transition: right 0.2s ease; /* Плавное перемещение */
 }
-.side_container{
+.side_bar{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    gap: 10px;
+}
+.side_container{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: row;
     gap: 10px;
 }
 .side_edit{
@@ -31,10 +38,12 @@
 .app_section{
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     flex-direction: column;
     padding: 10px;
     gap: 10px;
+    width: 44px;
+    min-height: 44px;
     border-radius: 23px;
     background: rgba(217, 217, 217, 0.30);
     backdrop-filter: blur(37.5px);
@@ -46,7 +55,7 @@
     overflow-wrap: anywhere;
     color: #fff;
 }
-.side_app{
+[class^="side_app_"]{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -85,14 +94,18 @@
     align-items: flex-start;
     justify-content: center;
     flex-direction: column;
+    margin-top: 48px;
     gap: 10px;
-    padding: 10px;
+    padding: 20px;
     border-radius: 23px;
     background: rgba(217, 217, 217, 0.30);
     backdrop-filter: blur(37.5px);
     font-size: 16px;
     font-weight: 700;
     color: #fff;
+}
+.side_edit_configuration p{
+    margin: 10px;
 }
 .side_edit_container{
     display: flex;
@@ -120,4 +133,57 @@
     height: 30px;
     border-radius: 10px;
     background-color: #fff;
+}
+.side_settings_configuration{
+    display: none;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 23px;
+    background: rgba(217, 217, 217, 0.30);
+    backdrop-filter: blur(37.5px);
+    color: #fff;
+}
+.side_settings_configuration_title{
+    margin: 0;
+    font-size: 16px;
+    font-weight: 700;
+}
+.side_settings_configuration_text{
+    margin: 12px 0;
+    font-size: 14px;
+}
+.side_wallpaper_box{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+    overflow-x: auto;
+    white-space: nowrap; 
+    gap: 10px;
+    width: 179px;
+    height: 70px;
+}
+.side_wallpaper_box::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+}
+  
+.side_wallpaper{
+    display: inline-block;
+    width: 67px;
+    height: 67px;
+    border-radius: 14px;
+    cursor: pointer;
+}
+.side_about_box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 179px;
+    height: 42px;
+    font-size: 14px;
+    border-radius: 14px;
+    background-color: #2d2d2d;
 }
